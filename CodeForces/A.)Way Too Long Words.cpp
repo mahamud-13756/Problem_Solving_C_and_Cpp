@@ -1,3 +1,4 @@
+/*
 #include<iostream>
 using namespace std;
 
@@ -37,3 +38,42 @@ int main()
 
     return 0;
 }
+
+*/
+
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    string s[100];
+
+    for(int i=0; i<n; i++){
+
+        cin>>s[i];
+
+
+    }
+    cout<<"\n";
+
+    for(int i=0; i<n; i++){
+        if(s[i].size()>10){
+            int j;
+            int cnt=0;
+
+            cout<<s[i][0]<<s[i].size()-2<<s[i][s[i].size()-1]<<endl;
+
+        }
+        else{
+            cout<<s[i]<<endl;
+        }
+
+    }
+
+    return 0;
+}
+
