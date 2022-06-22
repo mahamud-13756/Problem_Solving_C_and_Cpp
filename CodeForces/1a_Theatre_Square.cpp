@@ -12,6 +12,8 @@ int main()
     else{q=m/a+1;}
     cout<<p*q<<endl;
 
+
+
     return 0;
 }
 
