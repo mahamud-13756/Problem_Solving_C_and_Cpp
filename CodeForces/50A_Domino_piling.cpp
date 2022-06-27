@@ -9,6 +9,8 @@ int main()
 
     cin>>M>>N;
 
+
+
     a=(M*N)/2;
     cout<<a<<endl;
 }
