@@ -1,4 +1,4 @@
-//
+//https://www.hackerrank.com/challenges/c-tutorial-pointer/problem?isFullScreen=true
 
 #include <iostream>
 #include <cstdio>
@@ -22,8 +22,8 @@ int main()
     int *aptr=&a,*bptr=&b;
 
     cin>>a>>b;
-    cout<<a<<endl;
-    cout<<b<<endl;
+    //cout<<a<<endl;
+   // cout<<b<<endl;
 
     update(aptr, bptr);
 
