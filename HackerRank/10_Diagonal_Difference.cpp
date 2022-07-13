@@ -21,16 +21,19 @@ int main(){
             if(i==j){
                SumOfDiagonal1+=matrix[i][j];
             }
-        }
-    }
-
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
             if(i==n-j-1){
                 SumOfDiagonal2+=matrix[i][j];
             }
         }
     }
+
+//    for(int i=0; i<n; i++){
+//        for(int j=0; j<n; j++){
+//            if(i==n-j-1){
+//                SumOfDiagonal2+=matrix[i][j];
+//            }
+//        }
+//    }
 
 
     DiagonalDeference=abs(SumOfDiagonal1-SumOfDiagonal2);
