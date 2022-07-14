@@ -36,6 +36,8 @@ int main(){
 //    }
 
 
+
+
     DiagonalDeference=abs(SumOfDiagonal1-SumOfDiagonal2);
 
     cout<<DiagonalDeference<<endl;
