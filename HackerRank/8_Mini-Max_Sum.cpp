@@ -1,29 +1,31 @@
+// https://www.hackerrank.com/challenges/mini-max-sum/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+
 #include<iostream>
 using namespace std;
 
 int main()
 {
-    int Array[5],total_sum=0,Esum=0;
+    long long Array[5],total_sum=0,Esum=0,MIN=LONG_MIN,MAX=LONG_MAX;
+
 
     for(int i=0; i<5; i++){
         cin>>Array[i];
-
-    }
-
-    for(int i=0; i<5; i++){
         total_sum=total_sum+Array[i];
 
-
     }
-    cout<<"Total sum: "<<total_sum<<endl;
+
+
+
+
 
     for(int i=0; i<5; i++){
-        if(Array[i]==Array[i]){
-            Esum=total_sum-Array[i];
-            cout<<"Esum "<<i<<": "<<Esum<<endl;
-        }
+        Esum=total_sum-Array[i];
+        MIN=min(MIN,Esum);
+        MAX=max(MAX,Esum);
 
     }
+
+    cout<<MIN<<" "<<MAX<<endl;
 
 
 
