@@ -24,7 +24,7 @@ int main()
         }
 
     }
-    cout<<tallest<<Count<<endl;
+    cout<<Count<<endl;
 
 
     return 0;
