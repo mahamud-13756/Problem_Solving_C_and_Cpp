@@ -14,6 +14,8 @@ int main(){
         cin>>arr[i];
     }
 
+
+
     for(int i=0; i<n; i++){
         if(arr[i]>0){
             count_positive++;
@@ -27,7 +29,9 @@ int main(){
     }
 
 //    cout<<setprecision(6)<<count_positive/n<<endl;
+
 //    cout<<count_negative/n<<endl;
+
 //    cout<<count_zero/n<<endl;
 
     printf("%.6lf\n",count_positive/n);
