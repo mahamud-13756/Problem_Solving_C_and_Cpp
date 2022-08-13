@@ -11,10 +11,11 @@ int main()
 
 
     transform(s.begin(), s.end(), s.begin(), ::tolower);
-    cout << s << endl;
+    //cout << s << endl;
+
     for ( l = 0; s[l]; l++);
 
-    cout << l << endl;
+    //cout << l << endl;
 
     for(int i=0; i<l; i++){
 
@@ -23,6 +24,7 @@ int main()
             continue;
 
        }
+
        else{
         cout<<"."<<s[i];
        }
