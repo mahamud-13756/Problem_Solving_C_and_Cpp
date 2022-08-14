@@ -5,31 +5,38 @@ using namespace std;
 
 int main()
 {
-    int len,i,j,cnt=0,a;
+    int len,i,j,cnt=0,a=0;
     string s;
+    char f[100];
     cin>> s;
     for(len=1; s[len]; len++);
     //cout<<len;
 
-    for(i=0; i<len; i++){
+    for(i=0;i<len; i++){
+        cnt=0;
 
-
-        for(j=i+1; j<len; j++){
-
+        for(j=0; j<i; j++){
             if(s[i]==s[j]){
-                cnt++;
+                cnt=1;
+                break;
             }
         }
-    }
-    a=len-cnt;
-    cout<<a<<endl;
+        if(cnt==0){
 
-//    if(len%2!=0){
-//        cout<<"IGNORE HIM!"<<endl;
-//    }
-//    else{
-//        cout<<"CHAT WITH HER!"<<endl;
-//    }
+
+            a++;
+        }
+
+    }
+    //cout<<a;
+
+
+    if(a%2!=0){
+        cout<<"IGNORE HIM!"<<endl;
+    }
+    else{
+        cout<<"CHAT WITH HER!"<<endl;
+    }
 
 
 
