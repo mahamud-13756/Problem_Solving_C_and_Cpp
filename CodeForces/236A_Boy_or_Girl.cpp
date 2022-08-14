@@ -7,7 +7,7 @@ int main()
 {
     int len,i,j,cnt=0,a=0;
     string s;
-    char f[100];
+
     cin>> s;
     for(len=1; s[len]; len++);
     //cout<<len;
