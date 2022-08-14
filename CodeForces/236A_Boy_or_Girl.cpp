@@ -12,6 +12,8 @@ int main()
     for(len=1; s[len]; len++);
     //cout<<len;
 
+
+    // Unique character find
     for(i=0;i<len; i++){
         cnt=0;
 
