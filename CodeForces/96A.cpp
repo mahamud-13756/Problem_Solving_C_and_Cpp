@@ -1,6 +1,4 @@
-#include<iostream>
-#include <string.h>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -16,7 +14,7 @@ int main()
     if(strlen(ss) >= 8) {
         for(int i=0; i<strlen(ss); i++) {
             if ( count == 7 ) {
-                cout<<"Yes";
+                cout<<"YES"<<endl;
                 break;
             }
             if( flag == ss[i]) {
@@ -29,7 +27,7 @@ int main()
         }
     }
     if ( count < 7 ){
-        cout<<"No";
+        cout<<"NO"<<endl;
     }
 
 
