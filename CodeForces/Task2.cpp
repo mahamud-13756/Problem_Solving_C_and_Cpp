@@ -37,6 +37,7 @@ int main()
         }
         else{
             b=1;
+            break;
         }
       }
 
