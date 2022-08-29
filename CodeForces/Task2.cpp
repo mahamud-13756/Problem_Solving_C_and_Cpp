@@ -12,7 +12,7 @@ int main()
 
     cin>>c;
     int len=c.size(), as=0,j=0,a=0,b=0;
-    //cout<<len<<endl;
+
 
     for(int i=0; i<len; i++){
 
