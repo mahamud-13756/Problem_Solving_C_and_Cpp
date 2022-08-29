@@ -11,23 +11,23 @@ int main()
     string c, s="MAHAMUD";
 
     cin>>c;
-    int len=c.size(), as=0,j=0,a=0;
+    int len=c.size(), as=0,j=0,a=0,b=0;
     //cout<<len<<endl;
 
     for(int i=0; i<len; i++){
-        a=0;
+
         as=(int) c[i];
-       // cout<<as<<endl;
+        //cout<<as<<endl;
 
         if(as%2!=0 && c[i]==s[j]){
-            a=1;
+
             j++;
 //            cout<<"M J"<<endl;
 //            cout<<endl;
 
         }
-        if(as%2==0 && c[i]==s[j]){
-            a=1;
+        else if(as%2==0 && c[i]==s[j]){
+
 
 //            cout<<"M"<<endl;
 //            cout<<endl;
@@ -35,18 +35,18 @@ int main()
                 j++;
             }
         }
-//        else{
-//            //cout<<"Does not Match"<<endl;
-//            a=0;
-//        }
+        else{
+            b=1;
+        }
+      }
 
-    }
 
-    if(a==1){
+
+    if(b==0){
         cout<<"Match"<<endl;
     }
 
-    if(a==0){
+    if(b==1){
         cout<<"Does not Match"<<endl;
     }
 
