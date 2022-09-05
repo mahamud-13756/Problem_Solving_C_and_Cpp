@@ -16,6 +16,12 @@ int main()
         hsh[s[i]-'A']++;
     }
 
+    for(int i=0; i<26; i++){
+        if(hsh[i]>0){
+            cout<<i+'A'<<" "<<hsh[i]<<endl;
+        }
+    }
+
 
     return 0;
 }
