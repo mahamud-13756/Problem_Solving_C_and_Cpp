@@ -11,7 +11,7 @@ int main(){
         if(digit<10)
             printf("%d", digit);
         else
-            printf("%d", digit+55);
+            printf("%c", digit+55);
     }
     return 0;
 }
