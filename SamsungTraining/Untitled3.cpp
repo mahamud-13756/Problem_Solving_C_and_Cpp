@@ -2,18 +2,23 @@
 using namespace std;
 int main(){
 
-public:
-    int missingNumber(vector<int>& nums){
-    int N = nums.size();
-    int sum1=0,sum2=0;
-    for(int i=0; i<N; i++){
-        sum1+=nums[i];
-        sum2+=i+1;
+    int n,k,c=0;
+    cin>>n>>k;
+
+    int arr[n];
+
+    for(int i=0;i<n; i++){
+        cin>>arr[i];
+        if(arr[i]==0) c++;
     }
-   cout<<sum1<<" "<<sum2;
-   int s= sum2-sum1;
-   cout<<s;
+
+    if((c<=k && (k-c)%2==0)){
+        cout<<"YES";
     }
+    else{
+        cout<<"NO";
+    }
+
 
     return 0;
 }
@@ -26,6 +31,21 @@ public:
     count++;
    }
    cout<<count;
+
+
+
+public:
+    int missingNumber(vector<int>& nums){
+    int N = nums.size();
+    int sum1=0,sum2=0;
+    for(int i=0; i<N; i++){
+        sum1+=nums[i];
+        sum2+=i+1;
+    }
+   cout<<sum1<<" "<<sum2;
+   int s= sum2-sum1;
+   cout<<s;
+    }
 
 
 
