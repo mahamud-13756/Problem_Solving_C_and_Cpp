@@ -13,6 +13,7 @@ int main()
             break;
         }
     }
+
     for( ; i>=0; i--){
         cout<<((n>>i)&1);
     }
