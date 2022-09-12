@@ -5,10 +5,15 @@ using namespace std;
 
 int main()
 {
-    int n;
+    int n,i;
     cin>>n;
 
-    for(int i=31; i>=0; i--){
+    for( i=31; i>0; i--){
+        if((n>>i)&1){
+            break;
+        }
+    }
+    for( ; i>=0; i--){
         cout<<((n>>i)&1);
     }
 
