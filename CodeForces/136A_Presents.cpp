@@ -2,7 +2,7 @@
 
 #include <iostream>
 using namespace std;
-int n, a, z[100];
+int n, a, z[110];
 int main() {
     cin >> n;
 
