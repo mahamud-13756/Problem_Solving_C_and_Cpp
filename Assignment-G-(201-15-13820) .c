@@ -4,9 +4,11 @@ int main()
 {
     char array[100];
     int id=1;
+
     scanf("%[^@]s",&array);
     for(int i=0; i<strlen(array); i++)
     {
+
         if(array[i]=='/' && array[i+1]=='/')
 
         {
@@ -36,12 +38,12 @@ int main()
         }
         else
         {
-                printf("%c", array[i]);
+               // printf("%c", array[i]);
         }
         if(array[i]=='\n')
         {
             id++;
-            printf("\n%d\t", id);
+            printf("\n%d\t", id-1);
         }
 
     }
