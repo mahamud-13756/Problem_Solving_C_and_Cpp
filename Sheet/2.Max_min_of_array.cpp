@@ -12,8 +12,8 @@ int main()
     for(int i=0; i<n; i++){
         cin>>arr[i];
     }
-    int Max = arr[0];
-    int Min = arr[0];
+    float Max = arr[0];
+    float Min = arr[0];
 
     for(int i=0; i<n; i++){
         if(Max<=arr[i]){
