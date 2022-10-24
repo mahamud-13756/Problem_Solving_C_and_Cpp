@@ -6,24 +6,46 @@ using namespace std;
 int main()
 {
     long long int n;
-    int l=0;
+     int s,l=0,b=0;
     cin>>n;
 
-    //for(int i=0; i<n; i++){
+    while(n!=0){
         if(n%10==4 || n%10==7){
 
-            n=n/10;
-            cout<<n;
+            l++;
         }
-        if(n==4 || n==7){
-            cout<<
-        }
+        n /= 10;
+        //n=n/10;
+    }
+    if(l==4 || l==7){
+        cout<<"YES"<<endl;
 
-   // }
-
-
-
+    }
+    else {
+            cout<<"NO"<<endl;
+         }
 
 
     return 0;
 }
+
+
+
+//
+//#include <iostream>
+//using namespace std;
+//string a;
+//int j;
+//int main() {
+//    cin >> a;
+//    for (int i = 0; i < a.size(); i++) {
+//        if (a[i] == '7' || a[i] == '4') {
+//            j++;
+//        }
+//    }
+//    if (j == 4 || j == 7) {
+//        cout << "YES";
+//    } else {
+//        cout << "NO";
+//    }
+//}
