@@ -4,29 +4,33 @@ using namespace std;
 
 int main()
 {
-    int count=0;
-    char flag, ss[100];
+    int count0=0,count1=0,b=0;
+    string s;
+    cin>>s;//100000000110000000
 
-    cin>>ss;
+    for(int i=0; i<s.size(); i++){
+        if(s[i]=='0'){
+            count0++;
+            count1=0;
+            if(count0>=7){
+                b=1;
+            }
 
-    flag = ss[0];
+        }
 
-    if(strlen(ss) >= 8) {
-        for(int i=0; i<strlen(ss); i++) {
-            if ( count == 7 ) {
-                cout<<"YES"<<endl;
-                break;
+        if(s[i]=='1'){
+            count1++;
+            count0=0;
+            if(count1>=7){
+                b=1;
             }
-            if( flag == ss[i]) {
-                count++;
-            }
-            else {
-                flag = ss[i];
-                count =1;
-            }
+
         }
     }
-    if ( count < 7 ){
+    if(b==1 || b==1){
+        cout<<"YES"<<endl;
+    }
+    else{
         cout<<"NO"<<endl;
     }
 
