@@ -19,9 +19,7 @@ int main()
 
     }
     }
-    else{
-        cout<<"NO";
-    }
+
 
     if(c==5){
         cout<<"YES";
