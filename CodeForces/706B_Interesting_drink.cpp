@@ -19,7 +19,7 @@ int main()
     while(m--)
     {
         cin>>k;
-        ans=upper_bound(a,a+n, k)-a;
+        ans=upper_bound(a,a+n, k)-a;// a is index
 
         cout<<ans<<endl;
     }
