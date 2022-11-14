@@ -24,7 +24,7 @@ void solve(int i){
         print();
         return;
     }
-    //A[i]=0;          // 0 er jaigai 'i' dile joto dibo tar age porjonto print korbe
+    A[i]=0;          // 0 er jaigai 'i' dile joto dibo tar age porjonto print korbe
     solve(i+1);
 
 }
