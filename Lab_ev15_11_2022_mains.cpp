@@ -46,7 +46,7 @@ int main()
     cout<< "States 0 1"<<endl<<endl;
     for(int i =0;i<row;i++)
     {
-        cout<< dfa[i][0]<<"\t"<<dfa[i][1]<<"\t"<<dfa[i][2]<<"\t"<<dfa[i][3]<<"\t"<<dfa[i][4]<<endl;
+        cout<< dfa[i][0]<<"\t"<<dfa[i][1]<<"\t"<<dfa[i][2]<<endl;
 
     }
 
