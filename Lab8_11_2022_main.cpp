@@ -56,7 +56,7 @@ int main()
 
     else
     {
-        cout<<"Hoy nai Botto"<<endl;
+        cout<<"Hoy nai code"<<endl;
     }
 
     return 0;
