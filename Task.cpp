@@ -1,41 +1,57 @@
-#include<iostream>
+#include<stdio.h>
 
-using namespace std;
+void input(int *);
+void display (int *);
+void sorting (int *);
 int main()
 {
-    string s;
-    int r=0,p=0;
-    getline(cin,s,'+');
-    for(int i=0; i<s.size(); i++)
+    int a[5];
+
+    input(a);
+    display(a);
+    sorting(a);
+
+}
+
+void input(int *x)
+{
+    int i;
+    for(i=0; i<5; i++)
     {
-        if(s[i]=='/'&&s[i+1]=='/')
+        scanf("%d",(x+i));
+    }
+
+}
+
+void display(int *y)
+{
+    int i;
+    for(i=0; i<5; i++)
+    {
+        printf("%d ",*(y+i));
+    }
+    printf("\n");
+}
+
+void sorting(int *z)
+{
+    int i,s;
+    for(i=0; i<5; i++)
+    {
+        for(j=1; j<5; j++)
         {
-            r=1;
-            continue;
-        }
-        if(r==1)
-        {
-            if(s[i]=='\n')
+            if(z[i]<z[j])                // 3 5 4 1 2
             {
-                r=0;
-                cout<<s[i];
+
             }
-            continue;
-        }
-        if(s[i]=='/'&&s[i+1]=='*')
-        {
-            p=1;
-            continue;
-        }
-        if(p==1)
-        {
-            if(s[i]=='*'&&s[i+1]=='/')
+            else
             {
-                p=0;
-                i++;
+                s=z[i+1];
+                z[i+1]=z[i];
+                z[i]=s;
+
             }
-            continue;
         }
-        cout<<s[i];
+
     }
 }
