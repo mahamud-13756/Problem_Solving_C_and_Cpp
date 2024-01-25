@@ -1,4 +1,5 @@
 //https://codeforces.com/problemset/problem/1/A
+//submitted
 #include<iostream>
 using namespace std;
 
