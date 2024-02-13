@@ -3,9 +3,8 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World" <<endl;
-    cout<<"kigo"<<endl;
-    cout << "mahamud";
+    int a; cin>>a;
+    cout <<a<< " mahamud"<<endl;
     cout << 13;
     return 0;
 }
