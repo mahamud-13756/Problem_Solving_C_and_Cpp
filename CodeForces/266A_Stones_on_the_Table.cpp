@@ -1,4 +1,5 @@
 //https://codeforces.com/problemset/problem/266/A
+//submitted 800
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -15,15 +16,12 @@ int main()
     }
     //RRBRRRB
     for(int i=0; i<a; i++){
-
-        for(int j=i+1; j<i+2; j++){
-            if(c[i]==c[j]){
-                cnt++;
-                break;
-            }
-
+        if(c[i]==c[i+1]){
+            cnt++;
         }
+
     }
+
 
     cout<<cnt<<endl;
 
