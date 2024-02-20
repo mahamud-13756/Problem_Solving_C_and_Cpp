@@ -17,12 +17,6 @@ using namespace std;
 #define ull                 unsigned long long
 
 
-// stratz = "abcdefghijklmnopqrstuvwxyz"
-// strATZ = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-// strATz_sc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-
-
-
 /*----Start Needed Function-----------------------------------------------*/
 
 // Function to calculate the factorial of a number
@@ -66,29 +60,26 @@ int sumOfDigits(int number){
 
     return sum;
 }
-int sumOfIntegers(int n) {
-    cout<<(n * (n + 1) / 2)<<endl;
-}
+
 
 //----int main()----------------------------------------------------
+const ll N=2e5+1;
 int main()
 {
+    int i=1;
+    vector<ll> vc(N);
+    while(i!=N){
+
+        vc[i]=vc[i-1]+sumOfDigits(i);
+        i++;
+    }
     int tc;
     cin>>tc;
     while(tc--)
     {
         int n; cin>>n;
-        ll total=45;
-        //cout<<sumOfDigits(n)<<endl;
-        if(n<10) sumOfIntegers(n);
-        else{
-            while(n!=9){
-                total+=sumOfDigits(n);
-                n--;
-            }
-            cout<<total<<endl;
-        }
 
+        cout<<vc[n]<<endl;
     }
     return 0;
 }

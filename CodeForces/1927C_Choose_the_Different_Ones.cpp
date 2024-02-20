@@ -6,6 +6,8 @@ using namespace std;
 /////////////////////////////////////////////////////////////////
 #define ll                  long long int
 #define ull                 unsigned long long
+#define py cout<<"YES\n";
+#define pn cout<<"NO\n";
 
 /////////////////////////////////////////////////////////////////
 
@@ -17,13 +19,43 @@ int main()
     cin>>t;
     while(t--)
     {
-        int n,m,k,cn=0,cn2=0;
+        int n,m,k;
         cin>>n>>m>>k;
+        int a[n],b[m];
+        unordered_map<int, int> mp1,mp2;
+        for(int i=0; i<n; ++i) {cin>>a[i]; mp1[a[i]]++;}
+        for(int i=0; i<m; ++i) {cin>>b[i]; mp2[b[i]]++;}
 
-        set<int> st1;
-        set<int> st2;
+        int x=0,y=0,chk;
+        for(int i=1; i<=k; ++i)
+        {
+            chk=0;
+            if(mp1[i]>0 && mp2[i]>0){x++; y++;}
+            else if(mp1[i]>0){x++;}
+            else if(mp2[i]>0){y++;}
+            else {chk=1; break;}
+        }
 
-        for (int i = 0; i < n; ++i) {
+        //cout<<x<<y;
+
+        if(chk==0){
+            if((x>=(k/2)) && (y>=(k/2))) py
+            else pn
+        }else pn
+
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+/*
+ for (int i = 0; i < n; ++i) {
         int element;
         cin >> element;
         st1.insert(element);
@@ -72,9 +104,4 @@ int main()
                 else cout<<"NO\n";
         }
         else cout<<"NO\n";
-
-    }
-
-
-    return 0;
-}
+*/
