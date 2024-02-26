@@ -13,21 +13,21 @@ int main()
         cin>>s;
         int p;
         cin>>p;
-        int z=s.size();
-        pair<char, int> pr[z];
-        for(int i=0; i<z; ++i)
+        int za=s.size();
+        pair<char, int> pr[za];
+        for(int i=0; i<za; ++i)
         {
             pr[i].first=s[i];
             pr[i].second=i+1;
         }
 
         ll ad=0;
-        sort(pr, pr + z);
+        sort(pr, pr + za);
         int j=0;
 
         int st1=0,st2;
 
-        while (z--)
+        while (za--)
         {
             st1 += (pr[j].first - 'a' + 1); // Corrected the index and added 1 for 'a'
 
