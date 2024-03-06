@@ -77,7 +77,44 @@ int main()
     cin>>tc;
     while(tc--)
     {
-        solve();
+        int n; cin>>n;
+        string s1,s2; cin>>s1>>s2;
+        vector<char> vc;
+        vc.push_back(s1[0]);
+        int cnt=1,f=0;
+        for(int i=0; i<n; ++i)
+        {
+            if(f==0){
+                if(s1[i+1]==s2[i]){
+                    cnt++;
+                    vc.push_back(s1[i+1]);
+                    if(i==(n-2)){
+                        vc.push_back(s2[n-1]);
+                        break;
+                    }
+                }
+                else if(s1[i+1]<s2[i]){
+                    cnt=1;
+                    vc.push_back(s1[i+1]);
+                    if(i==(n-2)){
+                        vc.push_back(s2[n-1]);
+                        break;
+                    }
+                }
+                else{
+                    vc.push_back(s2[i]);
+                    f=1;
+                }
+            }
+            else{
+                vc.push_back(s2[i]);
+            }
+
+        }
+
+        for(auto it : vc) cout<<it;
+        cout<<"\n"<<cnt<<endl;
+
     }
     return 0;
 }
