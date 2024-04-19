@@ -1,5 +1,5 @@
 //========“In the name of ALLAH, The Most Gracious and The Most Merciful“==========| Last Update: 19-022024
-    // problem link : https://codeforces.com/contest/1857/problem/C
+    // problem link : https://codeforces.com/contest/1790/problem/A
     // Name         : .cpp
     // Author       : Md. Mahamud Mredha
     // Version      :
@@ -77,37 +77,15 @@ int main()
     cin>>tc;
     while(tc--)
     {
-        int n; cin>>n;
-        int sz = (n*(n-1))/2;
-        int a[sz],ans[n];
-        for(int i=0; i<sz; ++i) cin>>a[i];
-
-        sort(a, a+sz);
-
-//        for(int i=0; i<sz; ++i)
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
-        reverse(a,a+sz);
-
-//        for(int i=0; i<sz; ++i) //reberse check ok!
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
-
-        int sumOfN=0;
-        for(int j=0; j<n-1; ++j){
-            sumOfN+=j;
-            ans[j]=a[sumOfN];
-        }
-        ans[n-1]=1e9;
-
-        for(int i=0; i<n; ++i)
+        string s, s2="314159265358979323846264338327";
+        cin>>s;
+        int cnt=0;
+        for(int i=0; i<s.size(); ++i)
         {
-            cout<<ans[i]<<" ";
-        }cout<<endl;
-
-
+            if(s[i]==s2[i]) cnt++;
+            else break;
+        }
+        cout<<cnt<<endl;
     }
     return 0;
 }

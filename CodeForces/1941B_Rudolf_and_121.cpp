@@ -1,5 +1,5 @@
 //========“In the name of ALLAH, The Most Gracious and The Most Merciful“==========| Last Update: 19-022024
-    // problem link : https://codeforces.com/contest/1857/problem/C
+    // problem link : https://codeforces.com/contest/1941/problem/B
     // Name         : .cpp
     // Author       : Md. Mahamud Mredha
     // Version      :
@@ -78,34 +78,33 @@ int main()
     while(tc--)
     {
         int n; cin>>n;
-        int sz = (n*(n-1))/2;
-        int a[sz],ans[n];
-        for(int i=0; i<sz; ++i) cin>>a[i];
-
-        sort(a, a+sz);
-
-//        for(int i=0; i<sz; ++i)
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
-        reverse(a,a+sz);
-
-//        for(int i=0; i<sz; ++i) //reberse check ok!
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
-
-        int sumOfN=0;
-        for(int j=0; j<n-1; ++j){
-            sumOfN+=j;
-            ans[j]=a[sumOfN];
-        }
-        ans[n-1]=1e9;
-
+        vector<int> a(n);
         for(int i=0; i<n; ++i)
         {
-            cout<<ans[i]<<" ";
-        }cout<<endl;
+            cin>>a[i];
+        }
+
+        for(int i=1; i<n-1; ++i){
+            if(a[i-1]<=a[i+1] && a[i]>=2*a[i-1]){
+                a[i+1] -= a[i-1];
+                a[i] -=2*a[i-1];
+                a[i-1]=0;
+            }
+        }
+
+
+
+        bool zero= 1;
+        for(int i=0; i<n; ++i)
+        {
+            if(a[i]!=0){
+                zero=0;
+                break;
+            }
+        }
+
+        if(zero) py
+        else pn
 
 
     }

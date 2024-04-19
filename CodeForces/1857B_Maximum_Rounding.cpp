@@ -1,5 +1,5 @@
 //========“In the name of ALLAH, The Most Gracious and The Most Merciful“==========| Last Update: 19-022024
-    // problem link : https://codeforces.com/contest/1857/problem/C
+    // problem link : https://codeforces.com/contest/1857/problem/B
     // Name         : .cpp
     // Author       : Md. Mahamud Mredha
     // Version      :
@@ -65,10 +65,89 @@ int sumOfDigits(int number) {
 
 //----Used Function in this Program---------------------------------
 
+int main()
+{
+    int tc;
+    cin>>tc;
+    while(tc--)
+    {
+    string s; cin >>s;
+    int pos = s.size();
+    for (int i = s.size() - 1; i >= 0; i--)
+    {
+        if (s[i] - '0' >= 5)
+        {
+            if(i == 0) {
+                s = '1' + s;
+                pos = i + 1;
+            }
+            else {
+                s[i - 1]++;
+                pos = i;
+            }
+        }
+    }
+    for (int j = pos; j < s.size(); j++)
+        s[j] = '0';
+    cout << s << endl;
+    }
+    return 0;
+}
+
+
+
+
+
+/**
 void solve()
 {
+            ull n,ten=10; cin>>n;
+            vector<ull> vc,vc1;
+            ull sum=0,carry=0;
+            while(n){
+            ull rem = n%ten;
+            vc1.push_back(rem);
+            rem+=carry;
+            n = n/10;
+            carry=0;
+            if(rem>=5){
+                vc.push_back(0);
+                carry =1;
+            }
+            else{
+                vc.push_back(rem);
+            }
+        }
+        if(carry==1) vc.push_back(1);
+
+        reverse(vc.begin(), vc.end());
+        reverse(vc1.begin(), vc1.end());
+
+        for(auto it:vc1){
+            cout<<it;
+        }cout<<endl;
+
 
 }
+void solve1()
+{
+    ull n, ten=10; cin>>n;
+    vector<ull> vc,vc1;
+    while(n){
+    ull rem = n%ten;
+    vc1.push_back(rem);
+    n = n/10;
+    }
+
+    reverse(vc1.begin(), vc1.end());
+
+    for(auto it:vc1){
+        cout<<it;
+    }cout<<endl;
+
+
+}
+
 
 //----int main()----------------------------------------------------
 int main()
@@ -77,37 +156,10 @@ int main()
     cin>>tc;
     while(tc--)
     {
-        int n; cin>>n;
-        int sz = (n*(n-1))/2;
-        int a[sz],ans[n];
-        for(int i=0; i<sz; ++i) cin>>a[i];
-
-        sort(a, a+sz);
-
-//        for(int i=0; i<sz; ++i)
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
-        reverse(a,a+sz);
-
-//        for(int i=0; i<sz; ++i) //reberse check ok!
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
-
-        int sumOfN=0;
-        for(int j=0; j<n-1; ++j){
-            sumOfN+=j;
-            ans[j]=a[sumOfN];
-        }
-        ans[n-1]=1e9;
-
-        for(int i=0; i<n; ++i)
-        {
-            cout<<ans[i]<<" ";
-        }cout<<endl;
+       solve1();
 
 
     }
     return 0;
 }
+**/

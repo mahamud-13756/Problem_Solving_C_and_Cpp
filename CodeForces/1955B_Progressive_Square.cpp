@@ -1,4 +1,4 @@
-//========â€œIn the name of ALLAH, The Most Gracious and The Most Mercifulâ€œ===============================|
+//========“In the name of ALLAH, The Most Gracious and The Most Merciful“===============================|
     // problem link : https://codeforces.com/problemset/problem/1955/B
     // Name         : .cpp
     // Author       : Md. Mahamud Mredha
@@ -9,6 +9,7 @@
 //=======================================================================================================|
 #include<bits/stdc++.h>
 using namespace std;
+
 
 int main()
 {
@@ -39,6 +40,9 @@ int main()
 
         if(a==b) cout<<"YES\n";
         else cout<<"NO\n";
+
+
     }
+
     return 0;
 }

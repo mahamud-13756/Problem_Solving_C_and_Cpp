@@ -1,5 +1,5 @@
 //========“In the name of ALLAH, The Most Gracious and The Most Merciful“==========| Last Update: 19-022024
-    // problem link : https://codeforces.com/contest/1857/problem/C
+    // problem link :
     // Name         : .cpp
     // Author       : Md. Mahamud Mredha
     // Version      :
@@ -70,6 +70,43 @@ void solve()
 
 }
 
+
+// Function to check if a number is binary decimal
+bool isBinaryDecimal(int num) {
+    while (num > 0) {
+        int digit = num % 10;
+        if (digit != 0 && digit != 1) {
+            return false;
+        }
+        num /= 10;
+    }
+    return true;
+}
+
+// Function to find if a number is representable as a product of binary decimals
+bool isRepresentable(int n) {
+    if (n == 1) {
+        return true; // 1 can always be represented as 1
+    }
+
+    // Iterate through all possible binary decimals
+    for (int i = 1; i <= n; ++i) {
+        // Check if i divides n and if i is a binary decimal
+        if (n % i == 0 && isBinaryDecimal(i)) {
+            int quotient = n / i;
+            // If the quotient becomes 1, then n is representable as a product of binary decimals
+            if (quotient == 1) {
+                return true;
+            }
+            // Check if the quotient is a binary decimal
+            if (isBinaryDecimal(quotient)) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 //----int main()----------------------------------------------------
 int main()
 {
@@ -77,37 +114,13 @@ int main()
     cin>>tc;
     while(tc--)
     {
-        int n; cin>>n;
-        int sz = (n*(n-1))/2;
-        int a[sz],ans[n];
-        for(int i=0; i<sz; ++i) cin>>a[i];
+    int n; cin >> n;
 
-        sort(a, a+sz);
-
-//        for(int i=0; i<sz; ++i)
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
-        reverse(a,a+sz);
-
-//        for(int i=0; i<sz; ++i) //reberse check ok!
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
-
-        int sumOfN=0;
-        for(int j=0; j<n-1; ++j){
-            sumOfN+=j;
-            ans[j]=a[sumOfN];
-        }
-        ans[n-1]=1e9;
-
-        for(int i=0; i<n; ++i)
-        {
-            cout<<ans[i]<<" ";
-        }cout<<endl;
-
+    if (isRepresentable(n)) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
 
     }
+
     return 0;
 }
+

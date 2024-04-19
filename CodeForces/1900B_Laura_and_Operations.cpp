@@ -1,5 +1,5 @@
 //========“In the name of ALLAH, The Most Gracious and The Most Merciful“==========| Last Update: 19-022024
-    // problem link : https://codeforces.com/contest/1857/problem/C
+    // problem link : https://codeforces.com/problemset/problem/1900/B
     // Name         : .cpp
     // Author       : Md. Mahamud Mredha
     // Version      :
@@ -77,37 +77,21 @@ int main()
     cin>>tc;
     while(tc--)
     {
-        int n; cin>>n;
-        int sz = (n*(n-1))/2;
-        int a[sz],ans[n];
-        for(int i=0; i<sz; ++i) cin>>a[i];
+        int a,b,c; cin>>a>>b>>c;
+        int one, two, three;
+        //int as = max(a,b);
+        //int mx =max(as,c);
 
-        sort(a, a+sz);
+        if(abs(b-c)%2==0) one=1;
+        else one = 0;
 
-//        for(int i=0; i<sz; ++i)
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
-        reverse(a,a+sz);
+        if(abs(a-c)%2==0) two=1;
+        else two = 0;
 
-//        for(int i=0; i<sz; ++i) //reberse check ok!
-//        {
-//            cout<<a[i]<<" ";
-//        }cout<<endl;
+        if(abs(a-b)%2==0) three=1;
+        else three = 0;
 
-        int sumOfN=0;
-        for(int j=0; j<n-1; ++j){
-            sumOfN+=j;
-            ans[j]=a[sumOfN];
-        }
-        ans[n-1]=1e9;
-
-        for(int i=0; i<n; ++i)
-        {
-            cout<<ans[i]<<" ";
-        }cout<<endl;
-
-
+        cout<<one<<" "<<two<<" "<<three<<endl;
     }
     return 0;
 }
