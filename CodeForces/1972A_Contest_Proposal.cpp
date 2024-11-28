@@ -1,5 +1,5 @@
-//========â€œIn the name of ALLAH, The Most Gracious and The Most Mercifulâ€œ===============================|
-    // problem link : https://codeforces.com/problemset/problem/1977/A
+//========“In the name of ALLAH, The Most Gracious and The Most Merciful“===============================|
+    // problem link : https://codeforces.com/contest/1972/problem/A
     // Name         : .cpp
     // Author       : Md. Mahamud Mredha
     // Version      :
@@ -16,15 +16,18 @@ int main()
     int tc; cin>>tc;
     while(tc--)
     {
-        int n,m; cin>>n>>m;
+        int n; cin>>n;
+        int a[n],b[n];
+        for(int i=0; i<n; ++i) cin>>a[i];
+        for(int i=0; i<n; ++i) cin>>b[i];
 
-        if(n>=m)
+        int cnt=0, k=0;
+        for(int i=0; i<n; ++i)
         {
-            if( (n%2==0 and m%2==0) || (n%2==1 and m%2==1) ) cout<<"YES\n";
-            else cout<<"NO\n";
+            if(a[k]>b[i]) cnt++;
+            else ++k;
         }
-        else cout<<"NO\n";
+        cout<<cnt<<endl;
     }
-
     return 0;
 }

@@ -8,7 +8,7 @@ struct node {
 
 struct node *START = NULL;
 
-struct node *CreateNode() {
+struct node * CreateNode() {
     struct node *n;
     n = (struct node *)malloc(sizeof(struct node));
     return n;

@@ -1,10 +1,10 @@
-//========â€œIn the name of ALLAH, The Most Gracious and The Most Mercifulâ€œ===============================|
-    // problem link : https://codeforces.com/problemset/problem/1977/A
+//========“In the name of ALLAH, The Most Gracious and The Most Merciful“===============================|
+    // problem link : https://codeforces.com/contest/1574/problem/B
     // Name         : .cpp
     // Author       : Md. Mahamud Mredha
     // Version      :
     // Copyright    : use it under your responsibility
-    // Description  : Rating 900, Ansi-style
+    // Description  : Rating 1100, Ansi-style
     // status       : accepted
 //=======================================================================================================|
 #include<bits/stdc++.h>
@@ -16,15 +16,14 @@ int main()
     int tc; cin>>tc;
     while(tc--)
     {
-        int n,m; cin>>n>>m;
+        int a,b,c,m; cin>>a>>b>>c>>m;
+        int maxpr, minpr;
+        maxpr=a+b+c-3;
+        int maxval=max( max(a,b) , c);
+        minpr = maxval-a-b-c+maxval-1;
 
-        if(n>=m)
-        {
-            if( (n%2==0 and m%2==0) || (n%2==1 and m%2==1) ) cout<<"YES\n";
-            else cout<<"NO\n";
-        }
+        if(m>=minpr && m<=maxpr) cout<<"YES\n";
         else cout<<"NO\n";
     }
-
     return 0;
 }

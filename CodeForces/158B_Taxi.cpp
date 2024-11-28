@@ -1,175 +1,45 @@
-//https://codeforces.com/problemset/problem/158/B
+//========“In the name of ALLAH, The Most Gracious and The Most Merciful“===============================|
+    // problem link : //https://codeforces.com/problemset/problem/158/B
+    // Name         : .cpp
+    // Author       : Md. Mahamud Mredha
+    // Version      :
+    // Copyright    : use it under your responsibility
+    // Description  : Rating 900, Ansi-style
+    // status       : accepted
+//=======================================================================================================|
 
 #include<bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int s;
-    cin>>s;
-    int a[s],sum=0,d;
-
-    for(int i=0; i<s; i++){
+    int t; cin>>t;
+    int a[t];
+    int cnt1=0, cnt2=0, cnt3=0, cnt4=0;
+    for(int i=0; i<t; ++i)
+    {
         cin>>a[i];
-        sum=sum+a[i];
+        if(a[i]==1) cnt1++;
+        else if(a[i]==2) cnt2++;
+        else if(a[i]==3) cnt3++;
+        else cnt4++;
     }
-    //cout<<sum<<endl;
-
-    float g=(float)sum/4;
-
-    cout<<ceil(g);
-
-    return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*//https://codeforces.com/problemset/problem/158/B
-
-
-#include<bits/stdc++.h>
-using namespace std;
-
-int main()
-{
-    int n, s, count[5]= {0};
-    scanf("%d", &n);
-    while (n--)
-    {
-        scanf("%d", &s);
-        count[s] += 1;
+    //cnt3 er kaj
+    if(cnt3>=cnt1) {cnt1=0; }
+    else cnt1=cnt1-cnt3;
+    //cnt2 er kaj
+    if(cnt2%2==0) cnt2 = cnt2/2;
+    else{
+        cnt2 = cnt2/2;
+        cnt2++;
+        cnt1-=2;
     }
-    //cout<<count<<endl;
-    int total = count[4] + count[3] + count[2] / 2;
-    count[1] -= count[3];
-    if (count[2] % 2 == 1)
-    {
-        total += 1;
-        count[1] -= 2;
-    }
-    if (count[1] > 0)
-    {
-        total += (count[1] + 3) / 4;
-    }
-    printf("%d\n", total);
-    return 0;
-}
+    //cnt1 er kaj
+    cnt1=(cnt1+3)/4;
 
-*/
-/*
+    cout<<cnt4+cnt3+cnt2+cnt1<<endl;
 
- #include<stdio.h>
 
-int main()
- {
- int c=0;
- int l1=0,l2=0,l3=0;
 
-int n,i;
- int in;
- scanf("%d\n",&n);
-
-for ( i=0; i<n; i++)
- {
- scanf("%d",&in);
-
-if (in==1)   l1++;
- if (in==2)   l2++;
- if (in==3)   l3++;
- if (in==4)   c++;
 
 }
-
-if (l3>=l1) {
- c=c+l3;
- if (l2%2==0) c=c+l2/2;
- else  c=c+l2/2+1;
-
-printf("%d\n",c);
- return 0;
- }
- else {
- c=c+l3; l1=l1-l3;
-
-if (l2%2==0){   c=c+l2/2;  }
- else{  c=c+l2/2+1;l1=l1-2;  }
-
-if(l1>0){
- if(l1%4==0)  c=c+l1/4;
- else  c=c+l1/4 +1;
- printf("%d\n",c);
- return 0;
- }
- printf("%d\n",c);
- return 0;
-
-}
- }
-
- */
-
-
-
-
-
-
-
-
-
-
-/*
-int main()
-{
-    int s;
-    cin>>s;
-    int a[s],sum=0,d;
-
-    for(int i=0; i<s; i++){
-        cin>>a[i];
-        sum=sum+a[i];
-    }
-    //cout<<sum<<endl;
-
-    float g=(float)sum/4;
-
-    cout<<ceil(g);
-
-    return 0;
-}
-
-*/

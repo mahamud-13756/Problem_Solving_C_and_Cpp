@@ -1,4 +1,4 @@
-//========“In the name of ALLAH, The Most Gracious and The Most Merciful“==========| Last Update: 19-022024
+//========ï¿½In the name of ALLAH, The Most Gracious and The Most Mercifulï¿½==========| Last Update: 19-022024
     // problem link : https://codeforces.com/problemset/problem/1857/C
     // Name         : .cpp
     // Author       : Md. Mahamud Mredha
